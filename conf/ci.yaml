@@ -6,18 +6,19 @@ registry: {{ cluster.metadata.registry|json }}
 # remotes define which microservices has to be updated when code is pushed to the remote
 remotes:
   # Example:
-  
+
   # remote-name:
   #   namespace.service-name:
   #     container-name:
   #       path: microservices/app
   #       dockerfile: microservices/app/Dockerfile
-  
+
   # Default remote to push code and configuration
   {{ cluster.name }}:        # DO NOT edit this line
     <<: {}                   # DO NOT edit this line
-    
-    # Add output of `hasura conf generate-remote` below this line
 
-Get https://h34-nylon80-stg.hasura-app.io:3443/api/v1/namespaces/hasura/configmaps/controller-conf: dial tcp: lookup h34-nylon80-stg.hasura-app.io on 192.168.0.1:53: no such host
-[91m×[0m Kube clientset error [91merror[0m=Cannot fetch configmap controller-conf from hasura namespace
+    # Add output of `hasura conf generate-remote` below this line
+    '{{ cluster.metadata.namespaces.user }}.api':
+          api:
+            dockerfile: microservices/api/Dockerfile
+            path: microservices/api
