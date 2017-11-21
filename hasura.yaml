@@ -1,4 +1,13 @@
-description: Blank template for a Hasura project
-keywords: base, getting-started
-name: base
-platformVersion: v0.15.3
+description: A basic Android app which uses the various apis provided by hasura. This
+  quickstart also comes with a simple nodejs express app.
+keywords: getting-started, android, java, nodejs, node, express, mobile, android studio
+name: hello-iOS
+platformVersion: v0.15.9
+repoUrl: https://github.com/hasura/hello-android
+media:
+ images:
+ - https://raw.githubusercontent.com/hasura/hello-iOS/master/assets/Image1.png
+ - https://raw.githubusercontent.com/hasura/hello-iOS/master/assets/Image2.png
+ - https://raw.githubusercontent.com/hasura/hello-iOS/master/assets/Image3.png
+ - https://raw.githubusercontent.com/hasura/hello-iOS/master/assets/Image4.png
+ videos:
