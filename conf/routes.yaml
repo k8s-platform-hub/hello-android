@@ -161,3 +161,6 @@ notify:
     corsPolicy: allow_all
 
 # To see actual endpoints for these routes, use `$ hasura cluster status`
+
+Get https://h34-nylon80-stg.hasura-app.io:3443/api/v1/namespaces/hasura/configmaps/controller-conf: dial tcp: lookup h34-nylon80-stg.hasura-app.io on 192.168.0.1:53: no such host
+[91m×[0m Kube clientset error [91merror[0m=Cannot fetch configmap controller-conf from hasura namespace
