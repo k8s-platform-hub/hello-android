@@ -69,7 +69,18 @@ $ git commit -m "Initial Commit"
 $ git push hasura master
 ```
 
-After the above command has been executed, open up the Android app from `hello-android/mobile-app` in your Android Studio and run the app. Continue reading to know how the Android app leverages the Hasura apis.
+After the above command has been executed, open up the Android app from `hello-android/mobile-app` in your Android Studio:
+
+* Open up `Hasura.java` and find the following line:
+
+```java
+  private static final String CLUSTER_NAME = "cluster-name";
+```
+
+* Replace `cluster-name` with the name of your cluster.
+* Run the app.
+
+Continue reading to know how the Android app leverages the Hasura apis.
 
 ### Api console
 
