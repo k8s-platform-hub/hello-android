@@ -1,13 +1,11 @@
 description: A basic Android app which uses the various apis provided by hasura. This
   quickstart also comes with a simple nodejs express app.
 keywords: getting-started, android, java, nodejs, node, express, mobile, android studio
+media:
+  images:
+  - https://raw.githubusercontent.com/hasura/hello-android/master/assets/Image1.png
+  - https://raw.githubusercontent.com/hasura/hello-android/master/assets/Image2.png
+  - https://raw.githubusercontent.com/hasura/hello-android/master/assets/Image3.png
+  - https://raw.githubusercontent.com/hasura/hello-android/master/assets/Image4.png
 name: hello-android
 platformVersion: v0.15.9
-repoUrl: https://github.com/hasura/hello-android
-media:
- images:
- - https://raw.githubusercontent.com/hasura/hello-android/master/assets/Image1.png
- - https://raw.githubusercontent.com/hasura/hello-android/master/assets/Image2.png
- - https://raw.githubusercontent.com/hasura/hello-android/master/assets/Image3.png
- - https://raw.githubusercontent.com/hasura/hello-android/master/assets/Image4.png
- videos:
