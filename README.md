@@ -9,7 +9,7 @@ This quickstart aims at helping you develop an android app using Hasura as your 
 * [Data API](#data-apis)
 * [Auth API](#auth-apis)
 * [Filestore API](#filestore-apis)
-* [Custom service](#custom-service)
+* [Custom microservice](#custom-microservice)
 * [Local development](#local-development)
 * [Project Structure](#project-structure)
 
@@ -161,25 +161,25 @@ You can try out these in the `API EXPLORER` tab of the `api console`. To learn m
 
 The Android app in this quickstart shows us an example of uploading a file to the filestore. To see it in action click on the `Filestore` button on the main page.
 
-## Custom Service
+## Custom Microservice
 
-There might be cases where you might want to perform some custom business logic on your apis. For example, sending an email/sms to a user on sign up or sending a push notification to the mobile device when some event happens. For this, you would want to create your own custom service which does these for you on the endpoints that you define.
+There might be cases where you might want to perform some custom business logic on your apis. For example, sending an email/sms to a user on sign up or sending a push notification to the mobile device when some event happens. For this, you would want to create your own custom microservice which does these for you on the endpoints that you define.
 
-This quickstart comes with one such custom service written in `nodejs` using the `express` framework. Check it out in action at `https://api.cluster-name.hasura-app.io` . Currently, it returns a "Hello world from Android" at that endpoint and a list of articles at the "/get_articles" path.
+This quickstart comes with one such custom microservice written in `nodejs` using the `express` framework. Check it out in action at `https://api.cluster-name.hasura-app.io` . Currently, it returns a "Hello world from Android" at that endpoint and a list of articles at the "/get_articles" path.
 
-In case you want to use another language/framework for your custom service. Take a look at our [docs](https://docs.hasura.io/0.15/manual/custom-microservices/index.html) to see how you can add a new custom service.
+In case you want to use another language/framework for your custom microservice. Take a look at our [docs](https://docs.hasura.io/0.15/manual/custom-microservices/index.html) to see how you can add a new custom microservice.
 
 ## Local development
 
 Everytime you push, your code will get deployed on a public URL. However, for faster iteration you should locally test your changes.
 
-### Testing your custom service locally
+### Testing your custom microservice locally
 
-Since we are directly accessing the internal data endpoint (Read more about internal and external endpoints here) in the nodejs-express app. We need to forward our requests to the port at which the data service is running.
+Since we are directly accessing the internal data endpoint (Read more about internal and external endpoints here) in the nodejs-express app. We need to forward our requests to the port at which the data microservice is running.
 
 ```sh
 $ hasura forward -s data -n hasura --local-port 6432 --remote-port 8080
-$ cd services/api/app
+$ cd microservices/api/app
 $ ENVIRONMENT=dev npm start
 ```
 
@@ -206,7 +206,7 @@ The project (a.k.a. project directory) has a particular directory structure and 
 │   ├── routes.yaml
 │   └── session-store.yaml
 ├── migrations/
-└── services
+└── microservices
     ├── api/
     └── ui/
 
