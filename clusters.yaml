@@ -1,7 +1,6 @@
+clusters:
 - alias: hasura
-  config:
-    configmap: controller-conf
-    namespace: babushka20-hasura
   data: null
-  kubeContext: babushka20
-  name: babushka20
+  infra:
+    provider: hasura-free
+version: v1
